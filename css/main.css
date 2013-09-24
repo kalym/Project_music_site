@@ -1,0 +1,14 @@
+@media (min-width: 980px) {
+    body {
+        padding-top: 60px;
+        color: #5a5a5a;
+    }
+    .carousel img {
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 500px;
+    }
+
+
+}
