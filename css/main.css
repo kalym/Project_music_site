@@ -8,7 +8,14 @@
         height: 500px;
 
     }
-
+    @font-face {
+        font-family: cool_font;
+        src: url('Precious.ttf');
+    }
+    .cool-cursive{
+        font-family: cool_font;
+        color: #000000;
+    }
 
 
 }
