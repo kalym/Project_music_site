@@ -1,8 +1,8 @@
 
     body {
         /*padding-top: 60px;*/
-        color: #5a5a5a;
-        background: #000 url(/img/bg.png) repeat-x fixed 50% 0;
+
+        background: #000 ;
     }
     .navbar .nav,
     .navbar .nav > li {
@@ -23,6 +23,16 @@
         height: 500px;
 
     }
+
+    .carousel-caption img{
+        min-width: 10%;
+        width: 50%;
+        height: 50%;
+        margin-left: 50%;
+
+    }
+
+
     @font-face {
         font-family: cool_font;
         src: url('Precious.ttf');
@@ -30,9 +40,26 @@
     .cool-cursive{
         font-family: cool_font;
     }
-    .carousel-width{
-        width: 500px;
+    .carousel-body{
         background: none;
+        padding-bottom: 100px;
     }
+    .copy {
+        border-radius: 8px;
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        padding: 10px;
+        text-align: justify;
+        background: #333333;
 
 
+    }
+    /*home page*/
+    .pretty-text {
+        font-size: 18pt;
+    }
+.section1{
+
+    margin-left: -22%;
+
+}
