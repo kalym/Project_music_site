@@ -44,7 +44,7 @@
         background: none;
         padding-bottom: 100px;
     }
-    .copy {
+    .text-area {
         border-radius: 8px;
         opacity: 0.5;
         filter: alpha(opacity=50);
@@ -58,8 +58,42 @@
     .pretty-text {
         font-size: 18pt;
     }
-.section1{
+.carousel-section {
 
     margin-left: -22%;
 
 }
+/*media*/
+    .text-section{
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        padding-left: 6px;
+        padding-right: 6px;
+        border-radius: 6px;
+        background-color: #343434;
+        color: #ffffff;
+    }
+    .heading h1{
+        padding-top: 10px;
+    }
+
+    .actions {
+        background-color: #343434;
+        padding: 3% 0%;
+    }
+
+    .copy {
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        text-align: justify;
+    }
+
+    .footer {
+        color: #cccccc;
+        text-align: center;
+    }
+    .footer p {
+        font-size: 11px;
+    }
+    .footer a {
+        color: #ccccff;
+    }
