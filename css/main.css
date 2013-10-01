@@ -37,7 +37,7 @@
         font-family: cool_font;
         src: url('Precious.ttf');
     }
-    .cool-cursive{
+    .cool-cursive,.text-area p {
         font-family: cool_font;
     }
     .carousel-body{
@@ -51,11 +51,14 @@
         padding: 10px;
         text-align: justify;
         background: #333333;
+        max-width: 300px;
 
 
     }
+
+
     /*home page*/
-    .pretty-text {
+    .pretty-text,.text-area p {
         font-size: 18pt;
     }
 .carousel-section {
