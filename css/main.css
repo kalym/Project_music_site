@@ -109,6 +109,10 @@ html, body {
 
 }
 
+.vertical{
+    width:  30% !important;
+    height: 30% !important;
+}
 .carousel-caption img {
     min-width: 10%;
     width: 50%;
@@ -116,6 +120,7 @@ html, body {
     margin-left: 50%;
 
 }
+
 
 @font-face {
     font-family: cool_font;
