@@ -113,6 +113,9 @@ html, body {
     width:  30% !important;
     height: 30% !important;
 }
+.text-near-vertical {
+    margin-left: -5.435897% !important;
+}
 .carousel-caption img {
     min-width: 10%;
     width: 50%;
