@@ -13,6 +13,9 @@ app.get('/', function(request, response) {
 app.get('/contacts', function(request, response) {
     response.send(buffer2.toString());
 });
+app.get('contacts', function(request, response) {
+    response.send(buffer2.toString());
+});
 
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
