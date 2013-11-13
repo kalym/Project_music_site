@@ -1,29 +1,37 @@
-var fs = require('fs');
-var buffer = fs.readFileSync('index.html');
-var buffer2 = fs.readFileSync('contacts.html');
+var http = require("http"),
+    url = require("url"),
+    path = require("path"),
+    fs = require("fs")
+port = process.argv[2] || 8888;
 
+http.createServer(function(request, response) {
 
-var express = require('express');
-var app = express();
-app.use(express.logger());
+    var uri = url.parse(request.url).pathname
+        , filename = path.join(process.cwd(), uri);
 
-app.get('/', function(request, response) {
-    response.send(buffer.toString());
-});
-app.get('/contacts', function(request, response) {
-    response.send(buffer2.toString());
-});
-app.get('contacts', function(request, response) {
-    response.send(buffer2.toString());
-});
+    path.exists(filename, function(exists) {
+        if(!exists) {
+            response.writeHead(404, {"Content-Type": "text/plain"});
+            response.write("404 Not Found\n");
+            response.end();
+            return;
+        }
 
-var port = process.env.PORT || 8080;
-app.listen(port, function() {
-    console.log("Listening on " + port);
-});/**
- * Created with JetBrains WebStorm.
- * User: pavel.nykytiuk
- * Date: 13.11.13
- * Time: 12:35
- * To change this template use File | Settings | File Templates.
- */
+        if (fs.statSync(filename).isDirectory()) filename += '/index.html';
+
+        fs.readFile(filename, "binary", function(err, file) {
+            if(err) {
+                response.writeHead(500, {"Content-Type": "text/plain"});
+                response.write(err + "\n");
+                response.end();
+                return;
+            }
+
+            response.writeHead(200);
+            response.write(file, "binary");
+            response.end();
+        });
+    });
+}).listen(parseInt(port, 10));
+
+console.log("Static file server running at\n  => http://localhost:" + port + "/\nCTRL + C to shutdown");
